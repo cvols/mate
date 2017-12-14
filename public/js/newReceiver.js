@@ -21,14 +21,14 @@ $(document).ready(function () {
             zip_code: $("#zip_code").val().trim(),
             transaction: false
         }
-
+//on the submit we want to redirect . does that code happen here in an if statement?
         $.ajax('/newCustomer', {
             type: 'POST',
             data: newCustomer
         }).then(function () {
             console.log('added new Customer', newCustomer)
-            $('.hide-index').hide()
-            $('#customer-login').show()
+            // $('.hide-index').hide()
+            //  $('#customer-login').show()
         })
     });
 

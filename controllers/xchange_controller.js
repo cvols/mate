@@ -15,28 +15,72 @@ router.get('/', function (req, res) {
 router.get('/index', function (req, res) {
     res.render('./index');
 })
+// router.get('/newCustomer', function(req, res){
+//     res.render()
+// })
 
-router.post('/newCustomer', function (req, res) {
-    db.Customer.create({
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        username: req.body.username,
-        password: req.body.password,
-        email: req.body.email,
-        phone_number: req.body.phone_number,
-        street_address: req.body.street_address,
-        city: req.body.city,
-        state: req.body.state,
-        zip_code: req.body.zip_code,
-        transaction: false
-    }).then(function() {
-        // res.redirect('/custLogin')
+// router.post('/newCustomer', function (req, res) {
+//     db.Customer.findOne({
+//         where: {
+//             email: req.params.email,
+//         }
+//     }).then(function(dbCustomer) {
+//         if(dbCustomer){
+//             res.redirect('/sign-in')
+//         }
+//         else{
+//             db.Customer.create({
+//                 first_name: req.body.first_name,
+//                 last_name: req.body.last_name,
+//                 username: req.body.username,
+//                 password: req.body.password,
+//                 email: req.body.email,
+//                 phone_number: req.body.phone_number,
+//                 street_address: req.body.street_address,
+//                 city: req.body.city,
+//                 state: req.body.state,
+//                 zip_code: req.body.zip_code,
+//                 transaction: false
+//             }).then(function() {
+//                 // res.redirect('/custLogin')
+//             })
+//         }
+//         res.json(dbCustomer)
+//     })
+    
+// })
+
+router.post("/newCustomer", passport.authenticate('local-signup', 
+    {
+   successRedirect :"/reciever",
+   failureRedirect :"/index" 
     })
-})
+)
 
-router.get('/custLogin', function(req, res) {
-    res.render('./custLogin')
-})
+
+
+router.post('/custLogin', passport.authenticate('local-signin', {
+    successRedirect: "/reciever",
+    failureRedirect: '/'
+}
+
+));
+router.get("/newCustomer", isLoggedIn, function(req, res){
+    console.log("hello")
+    res.render('reciever')
+});
+
+
+router.get("/reciever", isLoggedIn, function(req, res){
+    res.render('reciever')
+});
+
+
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) return next();
+
+    res.redirect("/reciever");
+}
 
 router.get('/custLogin-btn/:password', function (req, res) {
     db.Customer.findOne({

@@ -2,7 +2,7 @@
 var Sequelize = require('sequelize')
 
 // creating mysql database using Sequelize
-var sequelize = new Sequelize('xchange_mate', 'chris', 'password', { 
+var sequelize = new Sequelize('xchange_mate', 'james3', 'password', { 
  
     host: 'localhost',
     dialect: 'mysql',
@@ -22,7 +22,7 @@ if (process.env.JAWSDB_URL) {
 } else {
     connection = mysql.createConnection({
         host: 'localhost',
-        user: 'chris',
+        user: 'james3',
         password: 'password',
         database: 'xchange_mate' 
     })

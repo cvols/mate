@@ -52,9 +52,12 @@ var LocalStrategy = require('passport-local').Strategy
 
 // requiring models folder for syncing
 var db = require('./models')
+require("./config/passport.js")(passport, db.Customer)
 
 // static directory
-app.use(express.static('public'))
+ //app.use(express.static('public'))
+ var path = require ('path');
+ app.use(express.static(path.join(__dirname + '/public/')));
 
 // setting up express app to handle data parsing
 var bodyParser = require('body-parser')
