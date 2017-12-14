@@ -1,0 +1,116 @@
+{{!-- Aaron's customer page --}}
+
+<br/>
+<br/>
+<h1>Customer Page</h1>
+<br/> {{!-- transaction location --}}
+<div class="container">
+    <div class="input-field col s12">
+        <br/>
+        <h5>* Select Desired Currency</h5>
+        <select id="dCurrency">
+            <option value="AUD">AUD</option>
+            <option value="BGN">BGN</option>
+            <option value="BRL">BRL</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="CZK">CZK</option>
+            <option value="DKK">DKK</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="HKD">HKD</option>
+            <option value="HRK">HRK</option>
+            <option value="HUF">HUF</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+            <option value="KRW">KRW</option>
+            <option value="MXN">BRL</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="PHP">PHP</option>
+            <option value="PLN">PLN</option>
+            <option value="RON">RON</option>
+            <option value="RUB">RUB</option>
+            <option value="SEK">SEK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="TRY">TRY</option>
+            <option value="USD">USD</option>
+            <option value="ZAR">ZAR</option>
+        </select>
+        <br/>
+        <h5>* Select Current Currency</h5>
+        <select id="cCurrency">
+            <option value="AUD">AUD</option>
+            <option value="BGN">BGN</option>
+            <option value="BRL">BRL</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="CZK">CZK</option>
+            <option value="DKK">DKK</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="HKD">HKD</option>
+            <option value="HRK">HRK</option>
+            <option value="HUF">HUF</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+            <option value="KRW">KRW</option>
+            <option value="MXN">BRL</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="PHP">PHP</option>
+            <option value="PLN">PLN</option>
+            <option value="RON">RON</option>
+            <option value="RUB">RUB</option>
+            <option value="SEK">SEK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="TRY">TRY</option>
+            <option value="USD">USD</option>
+            <option value="ZAR">ZAR</option>
+        </select>
+        <br/>
+        <h5>* Select Desired Currency Cash Amount</h5>
+        <select id="desiredAmount">
+            <option value="100">100.00</option>
+            <option value="200">200.00</option>
+            <option value="300">300.00</option>
+            <option value="400">400.00</option>
+            <option value="500">500.00</option>
+        </select>
+        <br/>
+        <h5>* Select Transaction Location</h5>
+        <select id="transLocation">
+            <option value="New York">New York</option>
+            <option value="London">London</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Paris">Paris</option>
+            <option value="Amsterdam">Amsterdam</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Montreal">Montreal</option>
+        </select>
+        <br/>
+        <h5>* Select Transaction Date</h5>
+        <select id="transDate">
+            <!--need to find a calendar api -->
+            <option value="1/1/2018">1/1/2018</option>
+            <option value="1/2/2018">1/2/2018</option>
+            <option value="1/3/2018">1/3/2018</option>
+            <option value="1/4/2018">1/4/2018</option>
+            <option value="1/5/2018">1/5/2018</option>
+            <option value="1/6/2018">1/6/2018</option>
+            <option value="1/7/2018">1/7/2018</option>
+        </select>
+
+        <button id="submit" type="button" name="submit" value="Submit">Submit</button>
+    </div>
+    </form>

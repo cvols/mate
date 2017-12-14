@@ -1,0 +1,287 @@
+<div class="container">
+	<div class="row">
+		<div class="col m6 hide-index">
+			<div class="card">
+				<div class="card-content">
+					<h2 class="center">Customer Sign In</h2>
+				</div>
+				<div class="card-tabs">
+					<ul class="tabs tabs-fixed-width teal">
+						<li class="tab">
+							<a class="white-text active" href="#login">login</a>
+						</li>
+						<li class="tab">
+							<a class="white-text" href="#register">register</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="card-content" id="login">
+					<form method="post" action="/custLogin">
+						<div class="form-container">
+							<h3 class="teal-text">Hello</h3>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="signInEmailC" type="email" class="validate">
+									<label for="signInEmailC">Email</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="signInPassword" type="password" class="validate">
+									<label for="signInPassword">Password</label>
+								</div>
+							</div>
+							<br>
+							<center>
+								<button class="btn waves-effect waves-light teal" type="submit" name="action">Connect</button>
+								<br>
+								<br>
+								<a href="">Forgotten password?</a>
+							</center>
+						</div>
+					</form>
+				</div>
+
+				<div class="card-content" id="register">
+					<form method="POST" action="/newCustomer" role="form">
+						<div class="form-container">
+							<h3 class="teal-text">Welcome</h3>
+							<div class="row">
+								<div class="input-field col s6">
+									<input id="first_name" type="text" class="validate">
+									<label for="first_name">First Name</label>
+								</div>
+								<div class="input-field col s6">
+									<input id="last_name" type="text" class="validate">
+									<label for="last_name">Last Name</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="user_name" type="text" class="validate">
+									<label for="user_name">Username</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="email" type="email" class="validate">
+									<label for="email">Email</label>
+								</div>
+							</div>
+							{{!-- <div class="row">
+								<div class="input-field col s12">
+									<input id="email-confirm" type="email" class="validate">
+									<label for="email-confirm">Email Confirmation</label>
+								</div>
+							</div> --}}
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="password" type="password" class="validate">
+									<label for="password">Password</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="password2" type="password" class="validate">
+									<label for="password2">Password Confirmation</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="phone_number" type="text" class="validate">
+									<label for="phone_number">Phone</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="address" type="text" class="validate">
+									<label for="address">Street Address</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="city" type="text" class="validate">
+									<label for="city">City</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="state" type="text" class="validate">
+									<label for="state">State</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="zip_code" type="number" class="validate">
+									<label for="zip_code">Zip Code</label>
+								</div>
+							</div>
+							<div class="row center">
+								<button class="btn waves-effect waves-light teal" type="submit" name="action" id="addCustomer">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col m6 hide-index">
+			<div class="card">
+				<div class="card-content">
+					<h2 class="center">Vendor Sign In</h2>
+				</div>
+				<div class="card-tabs">
+					<ul class="tabs tabs-fixed-width teal">
+						<li class="tab">
+							<a class="white-text active" href="#vlogin">login</a>
+						</li>
+						<li class="tab">
+							<a class="white-text" href="#vregister">register</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="card-content" id="vlogin">
+					<form method="post" action="">
+						<div class="form-container">
+							<h3 class="teal-text">Hello</h3>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="signInEmailV" type="email" class="validate">
+									<label for="signInEmailV">Email</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="signInPasswordV" type="password" class="validate">
+									<label for="signInPasswordV">Password</label>
+								</div>
+							</div>
+							<br>
+							<center>
+								<button class="btn waves-effect waves-light teal" type="submit" name="action">Connect</button>
+								<br>
+								<br>
+								<a href="">Forgotten password?</a>
+							</center>
+						</div>
+					</form>
+				</div>
+
+				<div class="card-content" id="vregister">
+					<form method="POST" action="/api/newVendor">
+						<div class="form-container">
+							<h3 class="teal-text">Welcome</h3>
+							<div class="row">
+								<div class="input-field col s6">
+									<input id="first_nameV" type="text" class="validate">
+									<label for="first_nameV">First Name</label>
+								</div>
+								<div class="input-field col s6">
+									<input id="last_nameV" type="text" class="validate">
+									<label for="last_nameV">Last Name</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="emailV" type="email" class="validate">
+									<label for="emailV">Email</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="email-confirmV" type="email" class="validate">
+									<label for="email-confirmV">Email Confirmation</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="passwordV" type="password" class="validate">
+									<label for="passwordV">Password</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="password-confirmV" type="password" class="validate">
+									<label for="password-confirmV">Password Confirmation</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="user_nameV" type="text" class="validate">
+									<label for="user_nameV">Username</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="phone_numberV" type="text" class="validate">
+									<label for="phone_numberV">Phone</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="addressV" type="text" class="validate">
+									<label for="addressV">Street Address</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="cityV" type="text" class="validate">
+									<label for="cityV">City</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="stateV" type="text" class="validate">
+									<label for="stateV">State</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="zip_codeV" type="number" class="validate">
+									<label for="zip_codeV">Zip Code</label>
+								</div>
+							</div>
+							<center>
+								<button class="btn waves-effect waves-light teal" type="submit" name="action" id="addVendor">Submit</button>
+							</center>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col s12" id="customer-login">
+			<div class="card-content" id="login">
+				<form method="post" action="/custLogin">
+					<div class="form-container">
+						<h3 class="teal-text">Please Sign In</h3>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="signInEmailC" type="email" class="validate">
+								<label for="signInEmailC">Email</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="signInPassword" type="password" class="validate">
+								<label for="signInPassword">Password</label>
+							</div>
+						</div>
+						<br>
+						<center>
+							<button class="btn waves-effect waves-light teal" type="submit" name="action">Connect</button>
+							<br>
+							<br>
+							<a href="">Forgotten password?</a>
+						</center>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+
+</div>
