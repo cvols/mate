@@ -1,9 +1,7 @@
 //JamesK 
-
-
 $(document).ready(function () {
 
-    $('#customer-login').hide()
+     $('#customer-login').hide()
 
     $("#addCustomer").on('click', function (event) {
         event.preventDefault();
