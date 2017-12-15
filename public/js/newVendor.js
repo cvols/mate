@@ -1,8 +1,9 @@
+//jamesk
 $(document).ready(function () {
     
-    $("#addVendor").click(function(){
+    $("#addVendor").on('click', function(event){
         event.preventDefault();
-        console.log("hello");
+        // console.log("hello");
         // make a newCharacter obj
         var newVendor = {
             // name from name input
@@ -24,16 +25,18 @@ $(document).ready(function () {
 
             state: $("#stateV").val().trim(),
 
-            zip_code: $("#zip_codeV").val().trim()
+            zip_code: $("#zip_codeV").val().trim(),
+            
+            transaction: false
         }  
 
 
-        $.ajax('/api/newVendor', {
+        $.ajax('/newVendor', {
             type: 'POST',
             data: newVendor
         }).then(function () {
             console.log('added new Vendor', newVendor)
-            location.reload()
+            // location.reload()
         })
     });
 });

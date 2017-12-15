@@ -1,4 +1,4 @@
-var bcrypt = require('bcryptjs')
+// var bcrypt = require('bcryptjs')
 
 module.exports = function (sequelize, DataTypes) {
     var Customer = sequelize.define("Customer", {
@@ -80,7 +80,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         transaction: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            defaultValue: false
         }
     })
 

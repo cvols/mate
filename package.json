@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/cvols/xchange-mate#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
@@ -31,7 +31,6 @@
     "mysql2": "^1.5.1",
     "nodemon": "^1.12.5",
     "passport": "^0.4.0",
-    "passport-http": "^0.3.0",
     "passport-local": "^1.0.0",
     "sequelize": "^4.27.0"
   },
